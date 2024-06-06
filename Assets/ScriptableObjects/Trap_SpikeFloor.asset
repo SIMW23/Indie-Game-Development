@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf8b7a9fb9fdcf468d9be0d21fa8d1a, type: 3}
+  m_Name: Trap_SpikeFloor
+  m_EditorClassIdentifier: 
+  <Trap>k__BackingField: {fileID: 4305544393385423116, guid: b527b0e4e896d9f46bfadc5a96d55e24, type: 3}
+  <Cost>k__BackingField: 450
+  <CooldownTime>k__BackingField: 0

@@ -39,6 +39,8 @@ public class EnemyStats : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Color newColor;
 
+    Base baseCrystal;
+
     void Start()
     {
         currentHP = maxHP;
@@ -50,6 +52,8 @@ public class EnemyStats : MonoBehaviour
             SetFacingLeft();
         else
             SetFacingRight();
+
+        baseCrystal = GameObject.FindGameObjectWithTag("Base").GetComponent<Base>();
     }
 
     void Update()
@@ -158,7 +162,7 @@ public class EnemyStats : MonoBehaviour
                 points = 100;
                 break;
             case EnemyType.Tank:
-                maxHP = 60;
+                maxHP = 50;
                 speed = 1;
                 knockbackForce = 5;
                 spriteRenderer = GetComponent<SpriteRenderer>();
@@ -290,6 +294,15 @@ public class EnemyStats : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Base")
+        {
+            baseCrystal.enemyNumbers++;
+            Destroy(this.gameObject); 
+        }
+    }
 }
 
 public enum EnemyType
@@ -305,3 +318,4 @@ public enum SpawnPosition
     RightScreen,
     LeftScreen
 }
+

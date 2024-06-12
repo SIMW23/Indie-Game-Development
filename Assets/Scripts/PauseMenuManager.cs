@@ -16,6 +16,7 @@ public class PauseMenuManager : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         settingsPage.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void ToggleOnThePauseMenu()
@@ -60,5 +61,11 @@ public class PauseMenuManager : MonoBehaviour
         Time.timeScale = 1;
         AudioManager.Instance.PlaySFX(sfxClick);
         //SceneManager.LoadScene("MenuScene");
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
     }
 }

@@ -125,12 +125,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6497933258500925246}
   - component: {fileID: 6497933258500925247}
-  - component: {fileID: 6497933258500925244}
   - component: {fileID: 6497933258500925245}
   - component: {fileID: 6497933257745495779}
   - component: {fileID: 7674514389811516945}
+  - component: {fileID: 10114797560039667}
   m_Layer: 6
-  m_Name: Test enemy
+  m_Name: Tank Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -145,13 +145,13 @@ Transform:
   m_GameObject: {fileID: 6497933258500925186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -19.39, y: -1.98, z: 0}
-  m_LocalScale: {x: 1.1026, y: 2.2107546, z: 1}
+  m_LocalScale: {x: 1.1443334, y: 1.1190901, z: 1.221}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 885804411}
   - {fileID: 440859737}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6497933258500925247
 SpriteRenderer:
@@ -194,8 +194,8 @@ SpriteRenderer:
   m_SortingLayerID: 2053146027
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 483866646, guid: 095ade40e1c1b8845995891009eb9e9c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -205,22 +205,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &6497933258500925244
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6497933258500925186}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.99999994, y: 1}
-  m_Direction: 0
 --- !u!50 &6497933258500925245
 Rigidbody2D:
   serializedVersion: 4
@@ -254,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f7208a47a62a26458fbfdeccb3c09c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: 0
+  enemyType: 1
   <SpawnPosition>k__BackingField: 0
   maxHP: 30
   knockbackForce: 8
@@ -267,6 +251,7 @@ MonoBehaviour:
   attackRadius: 1
   attackTime: 1
   points: 100
+  isDead: 0
   projectilePrefab: {fileID: 1165679192947361132, guid: adfb05aba92ad7542b3faabc0e282781, type: 3}
   projectileSpeed: 3
 --- !u!114 &7674514389811516945
@@ -282,3 +267,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionTypesIgnore: 0600000008000000
+--- !u!70 &10114797560039667
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6497933258500925186}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2.8846154, y: 3}
+  m_Direction: 0

@@ -128,6 +128,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  canMove: 1
   speed: 2.5
   jumpHeight: 14
   enemyMask:
@@ -139,6 +140,7 @@ MonoBehaviour:
   attackButton: {fileID: 0}
   placeTrapUI: {fileID: 0}
   Dead: 0
+  anim: {fileID: 0}
 --- !u!114 &1389366994939903543
 MonoBehaviour:
   m_ObjectHideFlags: 0

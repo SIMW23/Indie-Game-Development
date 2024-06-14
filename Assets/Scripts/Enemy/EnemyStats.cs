@@ -19,6 +19,7 @@ public class EnemyStats : MonoBehaviour
     public float attackRadius = 0.85f;
     public float attackTime = 1;
     public int points;
+    public bool isDead = false;
 
     [Header("Ranged Components")]
     public GameObject projectilePrefab;
@@ -33,6 +34,7 @@ public class EnemyStats : MonoBehaviour
     bool isFacingRight = true;
     bool isDetectingObjective = false;
     bool isAttacking = false;
+
 
     public static event Action<int> onUpdatePoint;
 
@@ -165,8 +167,6 @@ public class EnemyStats : MonoBehaviour
                 maxHP = 50;
                 speed = 1;
                 knockbackForce = 5;
-                spriteRenderer = GetComponent<SpriteRenderer>();
-                spriteRenderer.color = Color.green;
                 points = 200;
                 break;
         }
@@ -242,7 +242,9 @@ public class EnemyStats : MonoBehaviour
         {
             onUpdatePoint?.Invoke(points);
             currentHP = 0f;
-            Destroy(this.gameObject);
+            isDead = true;
+            this.gameObject.SetActive(false);
+            //Destroy(this.gameObject);
         }
     }
 
@@ -256,7 +258,9 @@ public class EnemyStats : MonoBehaviour
         {
             onUpdatePoint?.Invoke(points);
             currentHP = 0f;
-            Destroy(this.gameObject);
+            isDead = true;
+            this.gameObject.SetActive(false);
+            //Destroy(this.gameObject);
         }
 
         StartCoroutine(BeingKnockedBack(damageSource));
@@ -300,7 +304,8 @@ public class EnemyStats : MonoBehaviour
         if (collision.gameObject.tag == "Base")
         {
             baseCrystal.enemyNumbers++;
-            Destroy(this.gameObject); 
+            isDead = true;
+            this.gameObject.SetActive(false);
         }
     }
 }

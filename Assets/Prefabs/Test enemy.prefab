@@ -267,7 +267,7 @@ MonoBehaviour:
   attackRadius: 1
   attackTime: 1
   points: 100
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 1165679192947361132, guid: adfb05aba92ad7542b3faabc0e282781, type: 3}
   projectileSpeed: 3
 --- !u!114 &7674514389811516945
 MonoBehaviour:

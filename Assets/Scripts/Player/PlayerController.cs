@@ -11,8 +11,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private bool canMove = true;
     public float speed = 2.5f;
     public float jumpHeight = 15f;
+   
 
     [Header("Attack")]
     [SerializeField] private LayerMask enemyMask;
@@ -27,20 +29,36 @@ public class PlayerController : MonoBehaviour
     [HideInInspector] public bool Dead = false;
     private float horizontal;
     private bool isFacingRight = true;
-    private bool isAttackMode = true;
+    private bool isAttackMode = true;   
     private bool isPlaceTrapMode = false;
     public bool IsPlaceTrapMode => isPlaceTrapMode;
+     
+    [Header("Animation")]
+    [SerializeField] private Animator anim;
        
     public void Update()
     {
-        if (joystick.Horizontal >= .2f)
-            horizontal = speed;
-        else if (joystick.Horizontal <= -.2f)
-            horizontal = -speed;
-        else
-            horizontal = 0f;
-
-        CheckForFlip();
+        if (canMove == true)
+        {
+            if (joystick.Horizontal >= .2f)
+            {
+                anim.SetTrigger("isRunning");
+                horizontal = speed;
+                //Debug.Log(speed);
+            }
+            else if (joystick.Horizontal <= -.2f)
+            {
+                horizontal = -speed;
+                anim.SetTrigger("isRunning");
+            }
+            else
+            {
+                horizontal = 0f;
+                anim.SetTrigger("isIdle");
+            }
+            CheckForFlip();
+            //CheckForAnim();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -102,25 +120,61 @@ public class PlayerController : MonoBehaviour
         else if(!isAttackMode && isPlaceTrapMode)
         {
             isAttackMode = true;
-            isPlaceTrapMode = false;
+            isPlaceTrapMode = false; 
             attackButton.SetActive(true);
-            placeTrapUI.SetActive(false);
+            placeTrapUI.SetActive(false);    
         }
     }
 
     public void Attack()
     {
-        if(!isAttackMode)
+        anim.SetTrigger("Attack");
+        if (!isAttackMode)
             return;
+        StartCoroutine(AttackCD());
 
+        //Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRadius, enemyMask);
+
+        //if(enemies != null)
+        //{
+        //    foreach(Collider2D enemy in enemies)
+        //    {
+        //        enemy.GetComponent<EnemyStats>().TakeDamage(attackDamage, transform);
+        //    }
+        //}
+    }
+
+    public IEnumerator AttackCD()
+    {
         Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRadius, enemyMask);
+        canMove = false;
 
-        if(enemies != null)
+        if (enemies != null)
         {
-            foreach(Collider2D enemy in enemies)
+            foreach (Collider2D enemy in enemies)
             {
                 enemy.GetComponent<EnemyStats>().TakeDamage(attackDamage, transform);
             }
         }
+
+        yield return new WaitForSeconds(0.7f);
+        canMove = true;
     }
+
+    //public void AttackAnim()
+    //{
+    //    anim.SetTrigger("Attack");
+    //}
+    //void CheckForAnim()
+    //{
+    //    if (speed != 0)
+    //    {
+
+    //        Debug.Log("Running");
+    //    }
+    //    else if(speed == 0)
+    //    {
+
+    //    }
+    //}
 }

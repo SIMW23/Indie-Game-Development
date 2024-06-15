@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System;
 
+
 public class EnemyStats : MonoBehaviour
 {
     [Header("Enemy stats")]
@@ -34,6 +35,9 @@ public class EnemyStats : MonoBehaviour
     bool isFacingRight = true;
     bool isDetectingObjective = false;
     bool isAttacking = false;
+
+    [Header("Animation")]
+    [SerializeField] private Animator anim;
 
 
     public static event Action<int> onUpdatePoint;
@@ -116,6 +120,7 @@ public class EnemyStats : MonoBehaviour
             rb.velocity = new Vector3(-speed, rb.velocity.y);
             SetFacingLeft();
         }
+        anim.SetTrigger("isMoving");
     }
 
     void DetectObjective()
@@ -176,7 +181,7 @@ public class EnemyStats : MonoBehaviour
     {
         Debug.Log("Attack");
         attackTimeCounter = 0;
-
+        anim.SetTrigger("isAttack");
         switch(enemyType)
         {
             case EnemyType.Ranged:
@@ -237,6 +242,7 @@ public class EnemyStats : MonoBehaviour
         if (currentHP > damage)
         {
             currentHP -= damage;
+            anim.SetTrigger("isHurt");
         }
         else
         {

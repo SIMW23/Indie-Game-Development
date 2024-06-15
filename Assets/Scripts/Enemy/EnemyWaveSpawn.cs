@@ -36,6 +36,7 @@ public class EnemyWaveSpawn : MonoBehaviour
                 currentEnemies.Add(enemy);
                 yield return new WaitForSeconds(0.5f);
             }
+            
             while (currentEnemies.FindAll(a => a.isDead == false).Count > 0) yield return null;
         }
     }

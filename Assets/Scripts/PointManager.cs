@@ -31,7 +31,7 @@ public class PointManager : MonoBehaviour
     }
 
     [SerializeField] private Text pointText;
-    private int totalPoint = 0;
+    [SerializeField] private int totalPoint = 0;
     public int TotalPoint => totalPoint;
 
     void Awake()

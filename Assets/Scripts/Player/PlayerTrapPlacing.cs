@@ -8,6 +8,7 @@ public class PlayerTrapPlacing : MonoBehaviour
     public float placementDistance = 2f;
     public Color availableColor;
     public Color nonAvailableColor;
+    [SerializeField] private GameObject trapPlacement;
 
     public TrapSO trapSO;
     Transform player;
@@ -69,11 +70,13 @@ public class PlayerTrapPlacing : MonoBehaviour
         // Calculate position in front of the player with fixed Y position
         placementPosition = player.position + player.right * (player.transform.localScale.x > 0 ? placementDistance : -placementDistance);
 
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 3, 1<<3);
-        if(hit.collider != null)
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 3, 1 << 3);
+        if (hit.collider != null)
             groundYPosition = hit.point.y + 0.01f;
 
-        placementPosition.y = groundYPosition + currentPrefab.transform.localScale.y/2; // Lock the Y position to ground level
+        placementPosition.y = groundYPosition + currentPrefab.transform.localScale.y / 2; //Lock the Y position to ground level
+        Debug.Log(placementPosition.y);
+        //placementPosition.y = trapPlacement.transform.position.y;
         placementPosition.z = 0;
     }
 

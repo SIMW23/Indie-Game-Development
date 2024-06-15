@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private bool canMove = true;
+    private bool canAttack = true;
     public float speed = 2.5f;
     public float jumpHeight = 15f;
    
@@ -33,8 +34,10 @@ public class PlayerController : MonoBehaviour
     private bool isPlaceTrapMode = false;
     public bool IsPlaceTrapMode => isPlaceTrapMode;
      
-    [Header("Animation")]
+    [Header("Misc")]
     [SerializeField] private Animator anim;
+
+
        
     public void Update()
     {
@@ -57,6 +60,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetTrigger("isIdle");
             }
             CheckForFlip();
+
             //CheckForAnim();
         }
     }
@@ -146,19 +150,23 @@ public class PlayerController : MonoBehaviour
 
     public IEnumerator AttackCD()
     {
-        Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRadius, enemyMask);
-        canMove = false;
-
-        if (enemies != null)
+        if (canAttack)
         {
-            foreach (Collider2D enemy in enemies)
+            canAttack = false;
+            Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRadius, enemyMask);
+            canMove = false;
+
+            if (enemies != null)
             {
-                enemy.GetComponent<EnemyStats>().TakeDamage(attackDamage, transform);
+                foreach (Collider2D enemy in enemies)
+                {
+                    enemy.GetComponent<EnemyStats>().TakeDamage(attackDamage, transform);
+                }
             }
         }
-
         yield return new WaitForSeconds(0.7f);
         canMove = true;
+        canAttack = true;
     }
 
     //public void AttackAnim()

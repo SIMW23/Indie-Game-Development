@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Trap>k__BackingField: {fileID: 5494266084875356018, guid: 6a73c2e1ad0ce0447b36f7781eeb3a87, type: 3}
   <Cost>k__BackingField: 300
-  <CooldownTime>k__BackingField: 5
+  <CooldownTime>k__BackingField: 0

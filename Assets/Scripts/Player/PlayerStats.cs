@@ -13,9 +13,13 @@ public class PlayerStats : MonoBehaviour, IDamageable
      
     private string healthString;
 
+    [SerializeField] private AudioClip playerDamage;
+    [SerializeField] private GameObject gameOverMenu;
+
     void Start()
     {
         currentHP = maxHP;
+        gameOverMenu.SetActive(false);
     }
 
     private void Update()
@@ -29,11 +33,14 @@ public class PlayerStats : MonoBehaviour, IDamageable
         if (currentHP > damage)
         {
             currentHP -= damage;
+            AudioManager.Instance.PlaySFX(playerDamage);
         }
         else
         {
             currentHP = 0f;
             Destroy(this.gameObject);
+            Time.timeScale = 0;
+            gameOverMenu.SetActive(true);
         }
     }
 }

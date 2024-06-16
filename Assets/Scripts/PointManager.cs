@@ -36,7 +36,8 @@ public class PointManager : MonoBehaviour
 
     void Awake()
     {
-        UpdatePoint(totalPoint);
+        //UpdatePoint(totalPoint);
+        UpdatePointTextAtStart();
     }
 
     void OnEnable()
@@ -54,6 +55,11 @@ public class PointManager : MonoBehaviour
     public void UpdatePoint(int points)
     {
         totalPoint += points;
+        pointText.text = "Points: " + totalPoint.ToString();
+    }
+
+    private void UpdatePointTextAtStart() //this is only used once in awake
+    {
         pointText.text = "Points: " + totalPoint.ToString();
     }
 }

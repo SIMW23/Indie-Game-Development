@@ -24,6 +24,7 @@ public class PauseMenuManager : MonoBehaviour
         isOpeningThePauseMenu = true;
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
+        AudioManager.Instance.PlaySFX(sfxClick);
     }
 
     public void ToggleOffThePauseMenu()
@@ -32,6 +33,7 @@ public class PauseMenuManager : MonoBehaviour
         pauseMenu.SetActive(false);
         settingsPage.SetActive(false);
         Time.timeScale = 1;
+        AudioManager.Instance.PlaySFX(sfxClick);
     }
 
     public void Resume()

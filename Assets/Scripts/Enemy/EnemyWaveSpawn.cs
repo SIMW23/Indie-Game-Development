@@ -7,6 +7,7 @@ public class EnemyWaveSpawn : MonoBehaviour
     public EnemyWave[] waves;
     [SerializeField] private bool waveClear = false;
     [SerializeField] private List<EnemyStats> currentEnemies = new List<EnemyStats>();
+    [SerializeField] private float WaveCooldown = 2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class EnemyWaveSpawn : MonoBehaviour
         {
             for (int x = 0; x < wave.enemies.Length; x++)
             {
+                
                 //instantiating enemies
                 //GameObject obj = Instantiate(wave.enemies[x], wave.spawnpoints[x].position, Quaternion.identity);
 
@@ -34,10 +36,13 @@ public class EnemyWaveSpawn : MonoBehaviour
                 EnemyStats enemy = wave.enemies[x].GetComponent<EnemyStats>();
 
                 currentEnemies.Add(enemy);
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(2.5f);
             }
-            
             while (currentEnemies.FindAll(a => a.isDead == false).Count > 0) yield return null;
+            
         }
+        waveClear = true;
     }
+
+    
 }

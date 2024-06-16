@@ -36,8 +36,10 @@ public class EnemyStats : MonoBehaviour
     bool isDetectingObjective = false;
     bool isAttacking = false;
 
-    [Header("Animation")]
+    [Header("Misc")]
     [SerializeField] private Animator anim;
+    //[SerializeField] private GameObject rightIndicator;
+    //[SerializeField] private GameObject leftIndicator;
 
 
     public static event Action<int> onUpdatePoint;
@@ -157,21 +159,21 @@ public class EnemyStats : MonoBehaviour
         switch(enemyType)
         {
             case EnemyType.Ranged:
-                maxHP = 20;
+                maxHP = 30;
                 speed = 1.5f;
-                knockbackForce = 8;
+                knockbackForce = 6;
                 points = 100;
                 break;
             case EnemyType.Regular:
-                maxHP = 30;
+                maxHP = 40;
                 speed = 2;
-                knockbackForce = 8;
+                knockbackForce = 6;
                 points = 100;
                 break;
             case EnemyType.Tank:
-                maxHP = 50;
-                speed = 1;
-                knockbackForce = 5;
+                maxHP = 80;
+                speed = 0.5f;
+                knockbackForce = 3;
                 points = 200;
                 break;
         }

@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &319106091245975327
 SpriteRenderer:
@@ -102,6 +102,7 @@ MonoBehaviour:
   levelLimit: 2
   gameOver: 0
   gameOverMenu: {fileID: 0}
+  crystalText: {fileID: 0}
 --- !u!61 &319106091245975321
 BoxCollider2D:
   m_ObjectHideFlags: 0

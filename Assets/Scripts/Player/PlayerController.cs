@@ -36,6 +36,8 @@ public class PlayerController : MonoBehaviour
      
     [Header("Misc")]
     [SerializeField] private Animator anim;
+    [SerializeField] private AudioClip playerAttack;
+    [SerializeField] private AudioClip playerRun;
 
 
        
@@ -153,6 +155,7 @@ public class PlayerController : MonoBehaviour
         if (canAttack)
         {
             canAttack = false;
+            AudioManager.Instance.PlaySFX(playerAttack);
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRadius, enemyMask);
             canMove = false;
 
@@ -161,8 +164,10 @@ public class PlayerController : MonoBehaviour
                 foreach (Collider2D enemy in enemies)
                 {
                     enemy.GetComponent<EnemyStats>().TakeDamage(attackDamage, transform);
+                    
                 }
             }
+          
         }
         yield return new WaitForSeconds(0.7f);
         canMove = true;

@@ -1142,6 +1142,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6497933258500925186, guid: 57c7b439d92a1244baf39f9397843139, type: 3}
   m_PrefabInstance: {fileID: 472399814}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &552315348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5204126859420835052, guid: eb98ed796ebde104585934ac39accf98, type: 3}
+  m_PrefabInstance: {fileID: 470670103}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &567830150
 GameObject:
   m_ObjectHideFlags: 0
@@ -9740,6 +9745,8 @@ MonoBehaviour:
   waveClear: 0
   currentEnemies: []
   WaveCooldown: 20
+  WinScreen: {fileID: 552315348}
+  levelToUnlock: 3
 --- !u!1001 &1857918067
 PrefabInstance:
   m_ObjectHideFlags: 0

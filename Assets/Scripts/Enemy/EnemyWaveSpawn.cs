@@ -8,6 +8,8 @@ public class EnemyWaveSpawn : MonoBehaviour
     [SerializeField] private bool waveClear = false;
     [SerializeField] private List<EnemyStats> currentEnemies = new List<EnemyStats>();
     [SerializeField] private float WaveCooldown = 2f;
+    [SerializeField] private GameObject WinScreen;
+    public int levelToUnlock;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,17 @@ public class EnemyWaveSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        WinLevel();
+    }
+
+    void WinLevel()
+    {
+        if (waveClear)
+        {   
+            WinScreen.SetActive(true);
+            PlayerPrefs.SetInt("levelCompleted", levelToUnlock);
+            Time.timeScale = 0;
+        }
     }
 
     IEnumerator SpawnWave()

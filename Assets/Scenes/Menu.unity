@@ -319,7 +319,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelButtons: []
-  level2Unlocked: 0
 --- !u!1 &266905753
 GameObject:
   m_ObjectHideFlags: 0
@@ -2691,7 +2690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1561374710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3469,11 +3468,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  level2Unlocked: 0
+  - {fileID: 592102642}
+  - {fileID: 1660793889}
+  - {fileID: 642862057}
+  - {fileID: 1163096176}
 --- !u!4 &1803804299
 Transform:
   m_ObjectHideFlags: 0

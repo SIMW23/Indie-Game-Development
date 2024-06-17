@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour
+public class MyButton : MonoBehaviour
 {
    
     // Start is called before the first frame update
@@ -25,5 +25,5 @@ public class Button : MonoBehaviour
     {
         Debug.Log("Pressed");
     }
-   
+   // dm, dung tao may script ma co chung name vs dèault c?a unity em =))
 }

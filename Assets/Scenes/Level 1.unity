@@ -11331,6 +11331,22 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 397126849169291764, guid: eb98ed796ebde104585934ac39accf98, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1494244300314431054, guid: eb98ed796ebde104585934ac39accf98, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1035870822}
+    - target: {fileID: 1494244300314431054, guid: eb98ed796ebde104585934ac39accf98, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 5204126859420835052, guid: eb98ed796ebde104585934ac39accf98, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6592019434895702636, guid: eb98ed796ebde104585934ac39accf98, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -11543,6 +11559,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 210
       objectReference: {fileID: 0}
+    - target: {fileID: 9152430552192815215, guid: eb98ed796ebde104585934ac39accf98, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0024414062
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: eb98ed796ebde104585934ac39accf98, type: 3}
@@ -11602,6 +11622,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6781244947042197096, guid: c3a1151544787234ea7b984d8726e7b4, type: 3}
+      propertyPath: attackSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 7129fffcda1f5d44e82a98881f42a3a7, type: 3}
     - target: {fileID: 6781244947042197097, guid: c3a1151544787234ea7b984d8726e7b4, type: 3}
       propertyPath: sfxSlider
       value: 

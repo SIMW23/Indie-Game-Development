@@ -62,7 +62,7 @@ public class PauseMenuManager : MonoBehaviour
     {
         Time.timeScale = 1;
         AudioManager.Instance.PlaySFX(sfxClick);
-        //SceneManager.LoadScene("MenuScene");
+        SceneManager.LoadScene(0);
     }
 
     public void Restart()

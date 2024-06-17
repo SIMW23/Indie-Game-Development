@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip playerRun;
 
 
-       
+
     public void Update()
     {
         if (canMove == true)
@@ -156,6 +156,7 @@ public class PlayerController : MonoBehaviour
         {
             canAttack = false;
             AudioManager.Instance.PlaySFX(playerAttack);
+            AudioManager.Instance.AttackSFX();
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRadius, enemyMask);
             canMove = false;
 

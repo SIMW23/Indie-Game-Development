@@ -33,7 +33,7 @@ Transform:
   - {fileID: 6781244947665907167}
   - {fileID: 6781244947577979533}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6781244947042197096
 MonoBehaviour:
@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 525228a5bc27ad848bedff282b704ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSFX: {fileID: 8300000, guid: 7129fffcda1f5d44e82a98881f42a3a7, type: 3}
+  runningSFX: {fileID: 8300000, guid: bc1e3edceabce8847adf3709436e8f47, type: 3}
   musicSource: {fileID: 6781244947665907164}
   sfxSource: {fileID: 6781244947577979530}
 --- !u!114 &6781244947042197097

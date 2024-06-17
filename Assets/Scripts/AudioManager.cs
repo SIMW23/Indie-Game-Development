@@ -5,6 +5,8 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     private static AudioManager instance;
+    [SerializeField] private AudioClip attackSFX;
+    [SerializeField] private AudioClip runningSFX;
     public static AudioManager Instance
     {
         get
@@ -40,5 +42,15 @@ public class AudioManager : MonoBehaviour
     public void StopSFX()
     {
         sfxSource.Stop();
+    }
+
+    public void AttackSFX()
+    {
+        PlaySFX(attackSFX);
+    }
+
+    public void RunningSFX()
+    {
+        PlaySFX(runningSFX);
     }
 }

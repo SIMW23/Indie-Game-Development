@@ -19,6 +19,7 @@ public class runningSFX : MonoBehaviour
 
     public void PlayRunSFX()
     {
+        //AudioManager.Instance.RunningSFX();
         AudioManager.Instance.PlaySFX(playerRun);
     }
 }

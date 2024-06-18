@@ -134,13 +134,15 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
-  attackDamage: 12
+  attackDamage: 10
   attackPos: {fileID: 1389366994178431460}
   attackRadius: 1.5
   attackButton: {fileID: 0}
   placeTrapUI: {fileID: 0}
   Dead: 0
   anim: {fileID: 0}
+  playerAttack: {fileID: 0}
+  playerRun: {fileID: 0}
 --- !u!114 &1389366994939903543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +177,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHP: 0
   maxHP: 1000
+  healthBar: {fileID: 0}
+  healthText: {fileID: 0}
+  playerDamage: {fileID: 0}
+  gameOverMenu: {fileID: 0}
 --- !u!114 &911102400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +209,7 @@ MonoBehaviour:
   placementDistance: 2
   availableColor: {r: 0.42589888, g: 0.6698113, b: 0.4692611, a: 0.8666667}
   nonAvailableColor: {r: 0.7264151, g: 0.45503736, b: 0.45503736, a: 0.9098039}
+  trapPlacement: {fileID: 0}
   trapSO: {fileID: 0}
 --- !u!212 &4409990025109857325
 SpriteRenderer:

@@ -522,6 +522,8 @@ MonoBehaviour:
   placeTrapUI: {fileID: 0}
   Dead: 0
   anim: {fileID: 0}
+  playerAttack: {fileID: 0}
+  playerRun: {fileID: 0}
 --- !u!114 &272614929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,6 +560,8 @@ MonoBehaviour:
   maxHP: 100
   healthBar: {fileID: 0}
   healthText: {fileID: 0}
+  playerDamage: {fileID: 0}
+  gameOverMenu: {fileID: 0}
 --- !u!1 &288669530
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,6 +878,9 @@ MonoBehaviour:
     - {fileID: 1806180694}
   waveClear: 0
   currentEnemies: []
+  WaveCooldown: 2
+  WinScreen: {fileID: 0}
+  levelToUnlock: 0
 --- !u!4 &874747233
 Transform:
   m_ObjectHideFlags: 0

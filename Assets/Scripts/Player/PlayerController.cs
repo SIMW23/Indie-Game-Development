@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Attack")]
     [SerializeField] private LayerMask enemyMask;
-    [SerializeField] private float attackDamage;
+    [SerializeField] private float attackDamage = 10;
     [SerializeField] private Transform attackPos;
     [SerializeField] private float attackRadius;
 

@@ -167,7 +167,7 @@ public class EnemyStats : MonoBehaviour
             case EnemyType.Regular:
                 maxHP = 40;
                 speed = 2;
-                knockbackForce = 6;
+                knockbackForce = 4;
                 points = 100;
                 break;
             case EnemyType.Tank:
@@ -245,6 +245,7 @@ public class EnemyStats : MonoBehaviour
         {
             currentHP -= damage;
             anim.SetTrigger("isHurt");
+            Debug.Log(currentHP);
         }
         else
         {

@@ -58,7 +58,7 @@ public class PlayerTrapPlacing : MonoBehaviour
         }
 
         currentPrefab = trapSO.Trap;
-        
+
         currentPreview = new GameObject("Preview", typeof(SpriteRenderer));
         currentPreview.GetComponent<SpriteRenderer>().sprite = trapSO.Trap.GetComponent<SpriteRenderer>().sprite;
         currentPreview.transform.localScale = trapSO.Trap.transform.localScale;

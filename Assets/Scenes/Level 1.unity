@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.10247347, g: 0.28130242, b: 0.74987715, a: 1}
+  m_IndirectSpecularColor: {r: 0.109581135, g: 0.30095613, b: 0.7469535, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10567,6 +10567,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 35c1050ef4a401d49aba1f51e8be04de, type: 3}
     - target: {fileID: 911102406, guid: caa4465a68aa7ad4abe48f90f9c4f3cc, type: 3}
+      propertyPath: trapPlacement
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 911102406, guid: caa4465a68aa7ad4abe48f90f9c4f3cc, type: 3}
       propertyPath: availableColor.b
       value: 0.17808223
       objectReference: {fileID: 0}
@@ -11350,6 +11354,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 2926348439532484897, guid: eb98ed796ebde104585934ac39accf98, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 263
+      objectReference: {fileID: 0}
     - target: {fileID: 5204126859420835052, guid: eb98ed796ebde104585934ac39accf98, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -11455,6 +11463,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6592019435943996117, guid: eb98ed796ebde104585934ac39accf98, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592019435943996117, guid: eb98ed796ebde104585934ac39accf98, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592019435943996117, guid: eb98ed796ebde104585934ac39accf98, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592019435943996117, guid: eb98ed796ebde104585934ac39accf98, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -11501,6 +11521,18 @@ PrefabInstance:
     - target: {fileID: 6592019435943996117, guid: eb98ed796ebde104585934ac39accf98, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592019435943996118, guid: eb98ed796ebde104585934ac39accf98, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592019435943996118, guid: eb98ed796ebde104585934ac39accf98, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592019435943996121, guid: eb98ed796ebde104585934ac39accf98, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6592019435975062356, guid: eb98ed796ebde104585934ac39accf98, type: 3}
       propertyPath: m_AnchorMax.y
@@ -11565,6 +11597,10 @@ PrefabInstance:
     - target: {fileID: 6592019436769850751, guid: eb98ed796ebde104585934ac39accf98, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 210
+      objectReference: {fileID: 0}
+    - target: {fileID: 6592019436769850751, guid: eb98ed796ebde104585934ac39accf98, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -212
       objectReference: {fileID: 0}
     - target: {fileID: 9152430552192815215, guid: eb98ed796ebde104585934ac39accf98, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -11805,6 +11841,18 @@ PrefabInstance:
     - target: {fileID: 8465803508190242986, guid: 7689d532977ec6942a6e5c08e2be8ae4, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 8465803508190242989, guid: 7689d532977ec6942a6e5c08e2be8ae4, type: 3}
+      propertyPath: m_UpdateMethod
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8465803508190242989, guid: 7689d532977ec6942a6e5c08e2be8ae4, type: 3}
+      propertyPath: m_BlendUpdateMethod
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8465803508190242989, guid: 7689d532977ec6942a6e5c08e2be8ae4, type: 3}
+      propertyPath: m_DefaultBlend.m_Style
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8465803508190242990, guid: 7689d532977ec6942a6e5c08e2be8ae4, type: 3}
       propertyPath: m_RootOrder

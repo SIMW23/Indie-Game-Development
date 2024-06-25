@@ -39,8 +39,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip playerAttack;
     [SerializeField] private AudioClip playerRun;
 
-
-
     public void Update()
     {
         if (canMove == true)

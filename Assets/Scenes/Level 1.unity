@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.109581135, g: 0.30095613, b: 0.7469535, a: 1}
+  m_IndirectSpecularColor: {r: 0.10413005, g: 0.28576577, b: 0.74920636, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10548,7 +10548,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 911102399, guid: caa4465a68aa7ad4abe48f90f9c4f3cc, type: 3}
       propertyPath: maxHP
-      value: 100
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 911102399, guid: caa4465a68aa7ad4abe48f90f9c4f3cc, type: 3}
       propertyPath: healthBar
@@ -11250,7 +11250,7 @@ PrefabInstance:
       objectReference: {fileID: 405557933}
     - target: {fileID: 1720362654269390798, guid: cc119ae743707254babd0d7a281f6d2b, type: 3}
       propertyPath: totalPoint
-      value: 300
+      value: 300000
       objectReference: {fileID: 0}
     - target: {fileID: 1720362654269390799, guid: cc119ae743707254babd0d7a281f6d2b, type: 3}
       propertyPath: m_Name
@@ -11683,7 +11683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6781244947665907164, guid: c3a1151544787234ea7b984d8726e7b4, type: 3}
       propertyPath: m_Volume
-      value: 1
+      value: 0.272
       objectReference: {fileID: 0}
     - target: {fileID: 6781244947665907164, guid: c3a1151544787234ea7b984d8726e7b4, type: 3}
       propertyPath: m_audioClip

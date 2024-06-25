@@ -19,6 +19,7 @@ public class LoadLevel : MonoBehaviour
     }
     public void LoadSelectedScene()
     {
-        SceneManager.LoadScene(SceneNumber);
+        SceneManager.LoadScene(SceneNumber, LoadSceneMode.Single);
+
     }
 }

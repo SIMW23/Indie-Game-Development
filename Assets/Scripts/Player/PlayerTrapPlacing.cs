@@ -19,6 +19,7 @@ public class PlayerTrapPlacing : MonoBehaviour
     private GameObject currentPrefab;
     private bool isPlacing = false;
     private bool canPlace = false;
+    public int sortingOrder = 0;
 
     public static event Action<int> onUpdatePoint;
 
@@ -62,6 +63,7 @@ public class PlayerTrapPlacing : MonoBehaviour
         currentPreview = new GameObject("Preview", typeof(SpriteRenderer));
         currentPreview.GetComponent<SpriteRenderer>().sprite = trapSO.Trap.GetComponent<SpriteRenderer>().sprite;
         currentPreview.transform.localScale = trapSO.Trap.transform.localScale;
+        currentPreview.GetComponent<SpriteRenderer>().sortingLayerID = SortingLayer.NameToID("Default");
         isPlacing = true;
     }
 
@@ -97,6 +99,10 @@ public class PlayerTrapPlacing : MonoBehaviour
         {
             canPlace = false;
             currentPreview.GetComponent<SpriteRenderer>().color = nonAvailableColor;
+        }
+        if(currentPreview == null)
+        {
+            return;
         }
     }
 

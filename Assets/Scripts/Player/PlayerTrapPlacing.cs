@@ -100,7 +100,7 @@ public class PlayerTrapPlacing : MonoBehaviour
             canPlace = false;
             currentPreview.GetComponent<SpriteRenderer>().color = nonAvailableColor;
         }
-        if(currentPreview == null)
+        if (currentPreview == null)
         {
             return;
         }

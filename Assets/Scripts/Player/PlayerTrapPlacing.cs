@@ -36,9 +36,14 @@ public class PlayerTrapPlacing : MonoBehaviour
         }
         else if((!this.GetComponent<PlayerController>().IsPlaceTrapMode) && trapSO != null)
         {
-            Destroy(currentPrefab);
-            Destroy(currentPreview);
-            trapSO = null;
+            //Destroy(currentPrefab);
+            //Destroy(currentPreview);
+            //trapSO = null;
+            if (currentPrefab != null)
+                currentPrefab = null;
+
+            if (currentPreview != null)
+                Destroy(currentPreview);
         }
 
         if(!GetComponent<PlayerController>().IsPlaceTrapMode)
@@ -74,7 +79,6 @@ public class PlayerTrapPlacing : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 3, 1 << 3);
         if (hit.collider != null)
-            Debug.Log(hit);
             groundYPosition = hit.point.y + 0.01f;
 
         placementPosition.y = groundYPosition + currentPrefab.transform.localScale.y / 2; //Lock the Y position to ground level

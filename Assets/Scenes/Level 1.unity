@@ -9299,7 +9299,7 @@ MonoBehaviour:
   currentEnemies: []
   WaveCooldown: 5
   WinScreen: {fileID: 1447725652}
-  levelToUnlock: 2
+  levelToUnlock: 3
 --- !u!4 &874747233
 Transform:
   m_ObjectHideFlags: 0
@@ -10548,7 +10548,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 911102399, guid: caa4465a68aa7ad4abe48f90f9c4f3cc, type: 3}
       propertyPath: maxHP
-      value: 10000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 911102399, guid: caa4465a68aa7ad4abe48f90f9c4f3cc, type: 3}
       propertyPath: healthBar
@@ -11258,7 +11258,7 @@ PrefabInstance:
       objectReference: {fileID: 405557933}
     - target: {fileID: 1720362654269390798, guid: cc119ae743707254babd0d7a281f6d2b, type: 3}
       propertyPath: totalPoint
-      value: 300000
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1720362654269390799, guid: cc119ae743707254babd0d7a281f6d2b, type: 3}
       propertyPath: m_Name
@@ -11718,7 +11718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6883766600479435898, guid: 6b0e6a43aa49ba3479b694600ea52eac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.162319
+      value: -8.719759
       objectReference: {fileID: 0}
     - target: {fileID: 6883766600479435898, guid: 6b0e6a43aa49ba3479b694600ea52eac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11868,7 +11868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8465803508190242990, guid: 7689d532977ec6942a6e5c08e2be8ae4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.162319
+      value: -8.719759
       objectReference: {fileID: 0}
     - target: {fileID: 8465803508190242990, guid: 7689d532977ec6942a6e5c08e2be8ae4, type: 3}
       propertyPath: m_LocalPosition.y
